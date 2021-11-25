@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2021-11-25T22:48:34.203Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.52" etag="s7FTF8Mm29zEzOCY4hsU" version="15.8.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-25T22:50:14.005Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36 OPR/81.0.4196.52" etag="ZopC6Xn8ZS9hhOGlxwK9" version="15.8.6" type="github">
   <diagram id="t7iMz_v3nmqHoSBbqk-X" name="ModeloER">
-    <mxGraphModel dx="1824" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1397" dy="313" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -79,7 +79,7 @@
         <mxCell id="szS_IiKJX-dhthdG4j-6-33" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="szS_IiKJX-dhthdG4j-6-34" vertex="1">
           <mxGeometry width="180" height="102.5" as="geometry" />
         </mxCell>
-        <mxCell id="szS_IiKJX-dhthdG4j-6-32" value="&lt;div&gt;&lt;b&gt;ARTISTA&lt;/b&gt;&lt;/div&gt;&lt;div&gt;*nombre artistico&lt;/div&gt;&lt;div&gt;*género&lt;/div&gt;&lt;div&gt;0 historia autor&lt;/div&gt;&lt;div&gt;0 edad&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="szS_IiKJX-dhthdG4j-6-34" vertex="1">
+        <mxCell id="szS_IiKJX-dhthdG4j-6-32" value="&lt;div&gt;&lt;b&gt;ARTISTA&lt;/b&gt;&lt;/div&gt;&lt;div&gt;#nombre artistico&lt;/div&gt;&lt;div&gt;*género&lt;/div&gt;&lt;div&gt;0 historia autor&lt;/div&gt;&lt;div&gt;0 edad&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="szS_IiKJX-dhthdG4j-6-34" vertex="1">
           <mxGeometry x="15" y="11.25" width="150" height="80" as="geometry" />
         </mxCell>
         <mxCell id="szS_IiKJX-dhthdG4j-6-37" value="" style="endArrow=none;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="szS_IiKJX-dhthdG4j-6-1" edge="1">
@@ -378,6 +378,18 @@
         </mxCell>
         <mxCell id="E4MxPmM2y-Qh73wYfzmi-9" value="quien hizo" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=0;" vertex="1" parent="1">
           <mxGeometry x="970" y="440" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="E4MxPmM2y-Qh73wYfzmi-10" value="" style="endArrow=none;html=1;rounded=0;entryX=0.578;entryY=0.997;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="szS_IiKJX-dhthdG4j-6-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="730" as="sourcePoint" />
+            <mxPoint x="240" y="720" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="E4MxPmM2y-Qh73wYfzmi-11" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="715" as="sourcePoint" />
+            <mxPoint x="220" y="730" as="targetPoint" />
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
