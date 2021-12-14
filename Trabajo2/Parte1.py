@@ -46,10 +46,6 @@ def probar(listaIzquierda,listaDerecha,listaIzquierdaContraria,listaDerechaContr
     #Si no pues sería 0 (False)
     else:
         return 0
-    
-
-
-
 def A():
     #Introducir el primer grupo:
     #Introducir el tamaño del primer grupo
