@@ -142,5 +142,3 @@ def ParteB():
         if Funcionar == 0:
             print("¡Hasta pronto!")
         Repeticion = Repeticion + 1
-
-ParteB()

@@ -144,5 +144,4 @@ def A():
         print("No son equivalentes")
 
 
-A()
 

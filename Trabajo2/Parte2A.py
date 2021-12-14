@@ -165,4 +165,3 @@ def parteA():
         print("La relación NO se encuentra en BCNF.")
         print(stringCandidatas)
         print(stringDeterminantes)
-parteA()
