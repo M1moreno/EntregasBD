@@ -86,7 +86,7 @@ def ParteB():
     print(tabulate(Valores,headers = Nombres))
     print("Ahora es momento de verificar las dependencias funcionales")
     #Funcionar 1 o 0. Si es 1 entonces puede entrar a verificar, sino pues se deja de ejecutar el programa.
-    Funcionar = int(input("¿Quiere verificar las dependencias funcionales?"))
+    Funcionar = int(input("¿Quiere verificar las dependencias funcionales? (1 si quiere seguir, 0 si no)"))
     Repeticion = 0
     while Funcionar == 1:
         #Va a imprimir la repetición x
