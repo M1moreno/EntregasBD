@@ -58,16 +58,16 @@ def ParteB():
     diccionarioCabecera = {}
     #Ahora solo ando pidiendo la cabecera (Los atributos van separados por espacios).
     #Ej para introducir: Codigo Usuario Tipodesangre
-    print("Se presentará a continuación el punto 2B")
-    print("Digite la cabecera por favor")
+    print("Se presentará a continuación el punto 2B ")
+    print("Digite la cabecera de la tabla por favor (separados por espacio)")
     nombres = input()
     listaNombres = nombres.split()
     #Ahora vamos a introducir cada valor que contiene dicho atributo, también se va separa por espacio:
     #Ej: 13 22 55 330 0
-    print("Ahora introduzca los valores por cada atributo:")
+    print("Ahora introduzca los valores por cada atributo: (los datos de cada columna) ")
     #El for es justamente por eso, para que introduzca x veces según la cantidad de x atributos
     for i in range(0,len(listaNombres)):
-        print("Atributo " + listaNombres[i] + ":")
+        print("Atributo " + listaNombres[i] + ": (separados por espacio)")
         ejemplos = input()
         listaEjemplos = ejemplos.split()
         diccionarioCabecera.update({listaNombres[i]: listaEjemplos})
@@ -92,11 +92,11 @@ def ParteB():
         #Va a imprimir la repetición x
         print("Verificación de la dependencia funcional número " + str(Repeticion))
         #Ahora vamos a verificar las dependencias. Primero el lado izquierdo de la dependencia.
-        print("Introduzca los atributos del lado izquierdo")
+        print("Introduzca los atributos del lado izquierdo (separados por espacio)")
         izquierda = input()
         dependenciaIzquierda = izquierda.split()
         #Ahora el lado derecho
-        print("Introduzca los atributos del lado derecho")
+        print("Introduzca los atributos del lado derecho (separados por espacio)")
         derecha = input()
         dependenciaDerecha = derecha.split()
         while len(dependenciaIzquierda) > 4 or len(dependenciaDerecha) >4:
@@ -138,7 +138,7 @@ def ParteB():
                     print("La dependencia que acaba de ingresar se cumple en la muestra y es completa.")
                 else:
                     print("La dependencia que acaba de ingresar se cumple en la muestra y es incompleta.")
-        Funcionar = int(input("¿Quiere seguir con la verificación de dependencias funcionales?"))
+        Funcionar = int(input("¿Quiere seguir con la verificación de dependencias funcionales? (1 si quiere seguir, 0 si no)"))
         if Funcionar == 0:
             print("¡Hasta pronto!")
         Repeticion = Repeticion + 1

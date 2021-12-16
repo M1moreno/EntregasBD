@@ -49,7 +49,7 @@ def probar(listaIzquierda,listaDerecha,listaIzquierdaContraria,listaDerechaContr
 def A():
     #Introducir el primer grupo:
     #Introducir el tamaño del primer grupo
-    print("Introduzca el tamaño del primer conjunto")
+    print("Introduzca el tamaño del primer conjunto de dependencias funcionales")
     #El tamaño es para el for, para saber cuantos elementos van a existir en el grupo
     tamanoUno = int(input())
     #Aquí van a estar en sí todo el grupo de dependencias del grupo 1 según su lado
@@ -64,25 +64,25 @@ def A():
     #Se introduce primero la parte izquierda y luego la parte derecha, todo esto con espacios (por favor escriba estas letras en mayusculas)
     for i in range(0,tamanoUno):
         #Puse al final el i para que no se pierda de donde está
-        print("Introduzca la parte izquierda " + str(i+1))
+        print("Introduzca la parte izquierda de la dependencia funcional " + str(i+1) + " (separados por espacio)")
         izquierda = input()
         izquierdaMayuscula = izquierda.upper()
         grupoUnoIzquierda.append(izquierdaMayuscula.split())
-        print("Introduzca la parte derecha " + str(i+1))
+        print("Introduzca la parte derecha de la dependencia funcional " + str(i+1) + " (separados por espacio)")
         derecha = input()
         derechaMayuscula = derecha.upper()
         grupoUnoDerecha.append(derechaMayuscula.split())
     #Ahora el segundo grupo hacemos lo mismo
-    print("Introduzca el tamaño del segundo conjunto")
+    print("Introduzca el tamaño del segundo conjunto de dependencias funcionales")
     tamanoDos = int(input())
     grupoDosIzquierda = []
     grupoDosDerecha = []
     for i in range(0,tamanoDos):
-        print("Introduzca la parte izquierda " + str(i+1))
+        print("Introduzca la parte izquierda de la dependencia funcional " + str(i+1) + " (separados por espacio)")
         izquierda = input()
         izquierdaMayuscula = izquierda.upper()
         grupoDosIzquierda.append(izquierdaMayuscula.split())
-        print("Introduzca la parte derecha " + str(i+1))
+        print("Introduzca la parte derecha de la dependencia funcional " + str(i+1) + " (separados por espacio)")
         derecha = input()
         derechaMayuscula = derecha.upper()
         grupoDosDerecha.append(derechaMayuscula.split())

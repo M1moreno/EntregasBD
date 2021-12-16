@@ -93,15 +93,15 @@ def parteA():
     #Ahora solo ando pidiendo la cabecera (Los atributos van separados por espacios).
     #Ej para introducir: Codigo Usuario Tipodesangre
     print("Punto 2A (Comprobacion de BCNF)")
-    print("Digite la cabecera por favor")
+    print("Digite la cabecera de la tabla por favor (separados por espacio)")
     atributos = input()
     listaAtributos = atributos.split()
     #Ahora vamos a introducir cada valor que contiene dicho atributo, también se va separa por espacio:
     #Ej: 13 22 55 330 0
-    print("Ahora introduzca los valores por cada atributo:")
+    print("Ahora introduzca los valores por cada atributo: (los datos de cada columna)")
     #El for es para que introduzca x veces según la cantidad de x atributos
     for i in range(0,len(listaAtributos)):
-        print("Atributo " + listaAtributos[i] + ":")
+        print("Atributo " + listaAtributos[i] + ": (separados por espacio)")
         valores = input()
         listaValores = valores.split()
         relacion.update({listaAtributos[i]: listaValores})

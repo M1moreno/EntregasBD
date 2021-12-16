@@ -89,6 +89,7 @@ def switchEjemplos():
 
 #Este es el menú inicial. Puede elegir los puntos para ejecutarlos o elegir si quiere ver explicaciones o salirse del programa
 def switchInicial():
+    print("Seleccione el punto a evaluar")
     print("1.Opcion 1")
     print("2.Opcion 2a")
     print("3.Opcion 2b")
@@ -118,6 +119,7 @@ def switchInicial():
         print("-----------------------------")
         switchEjemplos()
 #Llama a switchInicial para iniciar el programa
+
 switchInicial()
 
 
