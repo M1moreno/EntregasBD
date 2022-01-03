@@ -120,7 +120,37 @@ def dos():
                     #Se mete el atributo solicitado por la función
                     listaDedicada.append(listaDemasAtributos[j][k][indiceAtributoFuncion])
                 #El máximo de ese grupito
-                Maximo = max(listaDedicada)
+                #El primer elemento de la lista, no es necesario verificar los demás
+                #
+                elemento = listaDedicada[0]
+                #Suponemos inicialmente que no son números, sino que son strings
+                entero = False
+                if elemento.count('-') == 1:
+                    #Reemplaza el "-", pero no queremos modificar al elemento en sí. (Nada más verificar)
+                    elemento1 = elemento.replace('-','',1)
+                    #Ahora reemplacemos ese "-" y unimos las dos partes , para ver si funciona el .isdigit
+                    if elemento1.isdigit() == True:
+                        #¿Tiene un . para separar el decimal? Entonces veamos si está bien (si es un número)
+                        if elemento1.count('.') == 1:
+                            #Reemplazamos el . por nada (se elimina el punto)
+                            if elemento1.replace('.','',1).isdigit() == True:
+                                entero = True
+                        elif elemento1.count('.') == 0:
+                            if elemento1.isdigit() == True:
+                                entero = True
+                elif elemento.count('-') == 0:
+                    if elemento.count('.') == 1:
+                        #Reemplazamos el . por nada (se elimina el punto)
+                        if elemento.replace('.','',1).isdigit() == True:
+                            entero = True
+                    elif elemento.count('.') == 0:
+                        if elemento.isdigit() == True:
+                            entero = True
+                if entero == True:
+                    nuevaListaDedicada = [float(x) for x in listaDedicada]
+                    Maximo = max(nuevaListaDedicada)
+                else:
+                    Maximo = max(listaDedicada)
                 #Metemos ese máximo a la tabla
                 nuevaTabla[atributosFuncionAgregados[i]].append(Maximo)
         #Similar al MAX, solo que ahora es el valor mínimo
@@ -130,7 +160,39 @@ def dos():
                 listaDedicada = []
                 for k in range(0,len(listaDemasAtributos[j])):
                     listaDedicada.append(listaDemasAtributos[j][k][indiceAtributoFuncion])
-                Minimo = min(listaDedicada)
+                #Verificamos si el primer elemento es un string o un número (para evitar complicaciones)
+                #Esta parte del código se tomó del SUM, dado que nos dimos cuenta de que
+                #si se hacía un min o max de un número no estaba funcionando correctamente, entonces
+                #tocaba pasar los strings de la lista a floats
+                elemento = listaDedicada[0]
+                entero = False
+                if elemento.count('-') == 1:
+                    #Reemplaza el "-", pero no queremos modificar al elemento en sí. (Nada más verificar)
+                    elemento1 = elemento.replace('-','',1)
+                    #Ahora reemplacemos ese "-" y unimos las dos partes , para ver si funciona el .isdigit
+                    if elemento1.isdigit() == True:
+                        #¿Tiene un . para separar el decimal? Entonces veamos si está bien (si es un número)
+                        if elemento1.count('.') == 1:
+                            #Reemplazamos el . por nada (se elimina el punto)
+                            if elemento1.replace('.','',1).isdigit() == True:
+                                entero = True
+                        elif elemento1.count('.') == 0:
+                            if elemento1.isdigit() == True:
+                                entero = True
+                elif elemento.count('-') == 0:
+                    if elemento.count('.') == 1:
+                        #Reemplazamos el . por nada (se elimina el punto)
+                        if elemento.replace('.','',1).isdigit() == True:
+                            entero = True
+                    elif elemento.count('.') == 0:
+                        if elemento.isdigit() == True:
+                            entero = True
+                if entero == True:
+                    nuevaListaDedicada = [float(x) for x in listaDedicada]
+                    Minimo = min(nuevaListaDedicada)
+                else:
+                    Minimo = min(listaDedicada)
+
                 nuevaTabla[atributosFuncionAgregados[i]].append(Minimo)
         #Función SUM
         if funcionAgregados[i] == "SUM":
@@ -268,7 +330,7 @@ def dos():
         for error in errores:
             print(error)
     print("Muchas gracias por el uso de este software, hasta luego.")
-dos()
+
 
         
     

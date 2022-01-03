@@ -54,7 +54,7 @@ def switchEjemplos():
         switchEjemplos()
     elif eleccion == 2:
         print("-----------------------------")
-        ejemploDos
+        ejemploDos()
         print("-----------------------------")
         switchEjemplos()
     elif eleccion == 3:

@@ -211,6 +211,5 @@ def uno():
             nuevaTabla = atributosComun(relacionUno,relacionDos)
     imprimirTabla(nuevaTabla)
 
-uno()
 
 
