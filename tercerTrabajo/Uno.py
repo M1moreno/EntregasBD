@@ -210,6 +210,7 @@ def uno():
         if len(listaAtributosUno) != len(listaAtributosDos):
             nuevaTabla = atributosComun(relacionUno,relacionDos)
     imprimirTabla(nuevaTabla)
+    print("Muchas gracias por el uso de este software, hasta luego.")
 
 
 
