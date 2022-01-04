@@ -14,6 +14,32 @@ def imprimirTabla(diccionario):
             Valor.append(diccionario[key][i])
         Valores.append(Valor)
     print(tabulate(Valores,headers = Nombres))
+#(La misma crearTabla de Uno)
+def crearTabla(mensaje):
+    #La relacion a crear
+    relacion = {}
+    #Imprimimos el mensaje sobre la primera relacion o segunda
+    print(mensaje)
+    #Los atributos
+    atributosUno = input()
+    listaAtributosUno = atributosUno.split(",")
+    #Como por ahora no tienen valores entonces se le pone vacío
+    for i in range(0,len(listaAtributosUno)):
+        relacion.update({listaAtributosUno[i]: []})
+    #Cantidad de tuplas
+    print("Digite la cantidad de tuplas que posee la tabla (recuerde que los valores de cada tupla se separan con una coma)")
+    cantidadTuplas = int(input())
+    #Por las tuplas
+    for i in range(0,cantidadTuplas):
+        print("Tupla " + str(i+1))
+        tupla = input()
+        listaTuplas = tupla.split(",")
+        #El contador es para que se vaya metiendo según el atributo
+        contador = 0
+        for elemento in listaTuplas:
+            relacion[listaAtributosUno[contador]].append(elemento)
+            contador += 1
+    return relacion
 #Vamos a crear una función para revisar si el conjunto de datos de un atributo es un String o un número
 #Por toda la lista
 def numero(lista):
@@ -39,23 +65,14 @@ def dos():
     #La tabla en cuestión
     relacion = {}
     #Los atributos de la tabla
-    print("Introduzca los atributos de la relación (separados por espacio)")
-    atributos = input()
-    #Una lista con los atributos 
-    listaAtributos = atributos.split()
-    print("Ahora introduzca los valores por cada atributo: (los datos de cada columna)")
-    for i in range(0,len(listaAtributos)):
-        print("Atributo " + listaAtributos[i] + " (separados por un espacio)")
-        valores = input()
-        listaValores = valores.split()
-        #Agregamos al atributo y sus valores (que están en una lista) al diccionario (que simula ser una tabla)
-        relacion.update({listaAtributos[i]: listaValores})
+    relacion = crearTabla("Introduzca los atributos de la relación (separados por comas)")
+    listaAtributos = [x for x in relacion]
     #Dibujar la tabla:
     print("Tabla:")
     imprimirTabla(relacion)
-    print("Introduzca la lista de atributos para agrupar: (separados por un espacio)")
+    print("Introduzca la lista de atributos para agrupar: (separados por comas)")
     atributosAgrupar = input()
-    listaAtributosAgrupar = atributosAgrupar.split()
+    listaAtributosAgrupar = atributosAgrupar.split(",")
     #Introducir la lista de agregados
     print("Aviso: Cada agregado se introduce en MAYÚSCULAS")
     print("Introduzca la cantidad de agregados:")

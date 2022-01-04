@@ -14,12 +14,6 @@ def noHayRelacionados(tabla1,tabla2):
     #Agregamos los atributos de la tabla 2
     for key in tabla2:
         tablaNueva.update({key:[]})
-    '''
-    for i in range(0,len(tabla1[primeraKey])):
-        #Como toca unir cada tupla de la tabla 2 con la 1 entonces hacemos un for con las tuplas de la tabla 2
-        for j in range(0,len(tabla2[primeraKeySegundaTabla])):
-            for key in tablaNueva:
-       '''
     #Segun la cantidad de tuplas de la tabla 2 inserto SOLAMENTE los valores de las tuplas de la tabla 1 (luego insertaré las de la tabla 2)
     tuplasTabla2 = len(tabla2[atributosDos[0]])
     for i in range(0,len(tabla1[atributosUno[0]])):
@@ -135,8 +129,7 @@ def atributosComun(tabla1,tabla2):
         tupla = []
         for key in atributosComun:
             tupla.append(tabla2[key][i])
-        tuplaDosComun.append(tupla)
-    
+        tuplaDosComun.append(tupla)  
     #En caso de que los valores de los atributos en común de la tabla 1 (respecto la tupla en donde se esté) esté presente en la tabla 2 entonces se hará natural join. (En caso de que no esté se introduce NULL)
     for i in range(0,len(tuplaUnoComun)):
         #¿Están estos valores de la tupla (según el atributo en común) en la otra tabla?
@@ -150,51 +143,54 @@ def atributosComun(tabla1,tabla2):
         else:
             for key in atributosNoComun:
                 tablaNueva[key].append("NULL")
-    return tablaNueva
-
-    
-
+    return tablaNueva 
+#El input del usuario para crear la tabla 1 y 2
+def crearTabla(mensaje):
+    #La relacion a crear
+    relacion = {}
+    #Imprimimos el mensaje sobre la primera relacion o segunda
+    print(mensaje)
+    #Los atributos
+    atributosUno = input()
+    listaAtributosUno = atributosUno.split(",")
+    #Como por ahora no tienen valores entonces se le pone vacío
+    for i in range(0,len(listaAtributosUno)):
+        relacion.update({listaAtributosUno[i]: []})
+    #Cantidad de tuplas
+    print("Digite la cantidad de tuplas que posee la tabla (recuerde que los valores de cada tupla se separan con una coma)")
+    cantidadTuplas = int(input())
+    #Por las tuplas
+    for i in range(0,cantidadTuplas):
+        print("Tupla " + str(i+1))
+        tupla = input()
+        listaTuplas = tupla.split(",")
+        #El contador es para que se vaya metiendo según el atributo
+        contador = 0
+        for elemento in listaTuplas:
+            relacion[listaAtributosUno[contador]].append(elemento)
+            contador += 1
+    return relacion
 #La función del primer punto
 def uno():
     #La tabla uno (se realizó otra vez como diccionario por la facilidad para acceder a los datos)
     relacionUno = {}
     #Tabla dos
     relacionDos = {}
-    #Se solicita los atributos de la primera tabla
-    print("Introduzca los atributos de la primera relación (separados por espacio)")
-    atributosUno = input()
-    listaAtributosUno = atributosUno.split()
-    #Pedimos los valores de cada atributo
-    print("Ahora introduzca los valores por cada atributo: (los datos de cada columna)")
-    for i in range(0,len(listaAtributosUno)):
-        print("Atributo " + listaAtributosUno[i] + " (separados por un espacio)")
-        valores = input()
-        listaValores = valores.split()
-        #Agregamos al atributo y sus valores (que están en una lista) al diccionario (que simula ser una tabla)
-        relacionUno.update({listaAtributosUno[i]: listaValores})
+    relacionUno = crearTabla("Introduzca los atributos de la primera relación (separados por comas)")
     #Dibujar la primera tabla
     print("Tabla uno:")
     imprimirTabla(relacionUno)
-    #Vamos a hacer esto mismo con la segunda tabla
-    print("Introduzca los atributos de la segunda relación (separados por un espacio)")
-    atributosDos = input()
-    listaAtributosDos = atributosDos.split()
-    #Pedimos los valores de cada atributo
-    print("Ahora introduzca los valores por cada atributo: (los datos de cada columna)")
-    for i in range(0,len(listaAtributosDos)):
-        print("Atributo " + listaAtributosDos[i] + " (separados por un espacio)")
-        valores = input()
-        listaValores = valores.split()
-        #Agregamos el atributo y sus valores (que están en una lista) al diccionario (que simula ser una tabla)
-        relacionDos.update({listaAtributosDos[i]:listaValores})
-    #Segunda tabla
-    print("Tabla dos:")
+    relacionDos = crearTabla("Introduzca los atributos de la segunda relación (separados por comas)")
+    #Dibujar la segunda tabla
+    print("Tabla dos")
     imprimirTabla(relacionDos)
     print("\n")
     #Vamos a checkear si tienen atributos en común, dependiendo de los atributos en común se realiza una acción (que son 3 en total)
     print("Tabla resultante:")
     #Primer caso: no hay atributos en comun
     #Si no hay ningun atributo de la listaDos en la listaUno
+    listaAtributosUno = [x for x in relacionUno]
+    listaAtributosDos = [x for x in relacionDos]
     if any(x in listaAtributosUno for x in listaAtributosDos) == False:
         nuevaTabla = noHayRelacionados(relacionUno,relacionDos)
     #Caso dos: todos los atributos son comunes:
