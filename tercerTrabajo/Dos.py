@@ -14,6 +14,26 @@ def imprimirTabla(diccionario):
             Valor.append(diccionario[key][i])
         Valores.append(Valor)
     print(tabulate(Valores,headers = Nombres))
+#Vamos a crear una función para revisar si el conjunto de datos de un atributo es un String o un número
+#Por toda la lista
+def numero(lista):
+    #Vamos a ver si todos los elementos de ese atributo son números
+    numero_checkear = 0
+    for numerito in lista:
+        try:
+            #¿Lo es? Ah bueno, entonces vaya sumando uno a ese numero_checkear
+            float(numerito)
+            numero_checkear += 1
+        #¿No lo es? Pues no hacemos nada
+        except ValueError:
+            pass
+    #¿Todos son números? Ah bueno, retorne verdadero
+    if numero_checkear == len(lista):
+        return True
+   #Pues si no es pues es falso 
+    else:
+        return False
+
 #La función del segundo punto
 def dos():
     #La tabla en cuestión
@@ -119,36 +139,14 @@ def dos():
                 for k in range(0,len(listaDemasAtributos[j])):
                     #Se mete el atributo solicitado por la función
                     listaDedicada.append(listaDemasAtributos[j][k][indiceAtributoFuncion])
-                #El máximo de ese grupito
-                #El primer elemento de la lista, no es necesario verificar los demás
-                #
-                elemento = listaDedicada[0]
-                #Suponemos inicialmente que no son números, sino que son strings
-                entero = False
-                if elemento.count('-') == 1:
-                    #Reemplaza el "-", pero no queremos modificar al elemento en sí. (Nada más verificar)
-                    elemento1 = elemento.replace('-','',1)
-                    #Ahora reemplacemos ese "-" y unimos las dos partes , para ver si funciona el .isdigit
-                    if elemento1.isdigit() == True:
-                        #¿Tiene un . para separar el decimal? Entonces veamos si está bien (si es un número)
-                        if elemento1.count('.') == 1:
-                            #Reemplazamos el . por nada (se elimina el punto)
-                            if elemento1.replace('.','',1).isdigit() == True:
-                                entero = True
-                        elif elemento1.count('.') == 0:
-                            if elemento1.isdigit() == True:
-                                entero = True
-                elif elemento.count('-') == 0:
-                    if elemento.count('.') == 1:
-                        #Reemplazamos el . por nada (se elimina el punto)
-                        if elemento.replace('.','',1).isdigit() == True:
-                            entero = True
-                    elif elemento.count('.') == 0:
-                        if elemento.isdigit() == True:
-                            entero = True
-                if entero == True:
+                #Usamos nuestra bella función número para verificar si todos son números
+                verdad = numero(listaDedicada)
+                #¿Son números? Pues bueno, cree una lista en donde todos son floats para encontrar el max.
+                #(Es que esto se hace por la forma en que se compara el max y min en los strings en caso de que sea número, el cual no funciona de forma correcta)
+                if verdad == True:
                     nuevaListaDedicada = [float(x) for x in listaDedicada]
                     Maximo = max(nuevaListaDedicada)
+                #¿No lo es? Ah bueno, entonces comparemos como string y yap
                 else:
                     Maximo = max(listaDedicada)
                 #Metemos ese máximo a la tabla
@@ -160,34 +158,9 @@ def dos():
                 listaDedicada = []
                 for k in range(0,len(listaDemasAtributos[j])):
                     listaDedicada.append(listaDemasAtributos[j][k][indiceAtributoFuncion])
-                #Verificamos si el primer elemento es un string o un número (para evitar complicaciones)
-                #Esta parte del código se tomó del SUM, dado que nos dimos cuenta de que
-                #si se hacía un min o max de un número no estaba funcionando correctamente, entonces
-                #tocaba pasar los strings de la lista a floats
-                elemento = listaDedicada[0]
-                entero = False
-                if elemento.count('-') == 1:
-                    #Reemplaza el "-", pero no queremos modificar al elemento en sí. (Nada más verificar)
-                    elemento1 = elemento.replace('-','',1)
-                    #Ahora reemplacemos ese "-" y unimos las dos partes , para ver si funciona el .isdigit
-                    if elemento1.isdigit() == True:
-                        #¿Tiene un . para separar el decimal? Entonces veamos si está bien (si es un número)
-                        if elemento1.count('.') == 1:
-                            #Reemplazamos el . por nada (se elimina el punto)
-                            if elemento1.replace('.','',1).isdigit() == True:
-                                entero = True
-                        elif elemento1.count('.') == 0:
-                            if elemento1.isdigit() == True:
-                                entero = True
-                elif elemento.count('-') == 0:
-                    if elemento.count('.') == 1:
-                        #Reemplazamos el . por nada (se elimina el punto)
-                        if elemento.replace('.','',1).isdigit() == True:
-                            entero = True
-                    elif elemento.count('.') == 0:
-                        if elemento.isdigit() == True:
-                            entero = True
-                if entero == True:
+                #Hagamos lo mismo que en MAX, pero ahora pues se hace el mínimo
+                verdad = numero(listaDedicada)
+                if verdad == True:
                     nuevaListaDedicada = [float(x) for x in listaDedicada]
                     Minimo = min(nuevaListaDedicada)
                 else:
@@ -206,48 +179,19 @@ def dos():
                 #Todas las tuplas de dicho grupo según el atributo de la función
                 for k in range(0,len(listaDemasAtributos[j])):
                     listaDedicada.append(listaDemasAtributos[j][k][indiceAtributoFuncion])
-                #Ahora hagamos la suma con los atributos de dichas tuplas
-                for elemento in listaDedicada:
-                    #Vamos a checkear antes algo: ¿Es esto un número negativo o positivo? (Me di cuenta luego de que ,isdigit() no identifica el "-", entonces toca hacerlo a mano)
-                    if elemento.count('-') == 1:
-                        #Reemplaza el "-", pero no queremos modificar al elemento en sí. (Nada más verificar)
-                        elemento1 = elemento.replace('-','',1)
-                        #Ahora reemplacemos ese "-" y unimos las dos partes , para ver si funciona el .isdigit
-                        if elemento1.isdigit() == True:
-                            #¿Tiene un . para separar el decimal? Entonces veamos si está bien (si es un número)
-                            if elemento1.count('.') == 1:
-                                #Reemplazamos el . por nada (se elimina el punto)
-                                if elemento1.replace('.','',1).isdigit() == True:
-                                    SUMA += float(elemento)
-                                else:
-                                    verdadSuma = 0
-                            elif elemento1.count('.') == 0:
-                                if elemento1.isdigit() == True:
-                                    SUMA += float(elemento)
-                                else:
-                                    verdadSuma = 0
-                            else:
-                                verdadSuma = 0
-                        else:
-                            verdadSuma = 0
-                    elif elemento.count('-') == 0:
-                        if elemento.count('.') == 1:
-                            #Reemplazamos el . por nada (se elimina el punto)
-                            if elemento.replace('.','',1).isdigit() == True:
-                                SUMA += float(elemento)
-                            else:
-                                verdadSuma = 0
-                        elif elemento.count('.') == 0:
-                            if elemento.isdigit() == True:
-                                SUMA += float(elemento)
-                            else:
-                                verdadSuma = 0
-                        else:
-                            verdadSuma = 0
-                    else:
-                        verdadSuma = 0
-                nuevaTabla[atributosFuncionAgregados[i]].append(SUMA)
-            #Agregar esta función a las que están dando error si hubo un error.
+                #Hacemos el mismo check de que si los elementos son números o String, pero ahora incorporamos la suma
+                verdad = numero(listaDedicada)
+                #¿Todos son números? Ah, pues sume
+                if verdad == True:
+                    for elemento in listaDedicada:
+                        #Se suma
+                        SUMA += float(elemento)
+                    #Meta eso a la tabla
+                    nuevaTabla[atributosFuncionAgregados[i]].append(SUMA)
+                #Entonces son string, vamos a agregar esto a la parte de errores
+                else:
+                    verdadSuma = 0
+            #¿Es string? Una lastima, porque ahora se imprimirá error y dirá que se presenta un error
             if verdadSuma == 0:
                 mensaje = "La columna " + str(atributosFuncionAgregados[i]) + " presenta un error."
                 errores.append(mensaje)
@@ -263,47 +207,19 @@ def dos():
                 #Todas las tuplas de dicho grupo según el atributo de la función
                 for k in range(0,len(listaDemasAtributos[j])):
                     listaDedicada.append(listaDemasAtributos[j][k][indiceAtributoFuncion])
-                #Ahora hagamos la suma con los atributos de dichas tuplas
-                for elemento in listaDedicada:
-                    #También vamos a verificar si tiene un "-"
-                    if elemento.count('-') == 1:
-                        elemento1 = elemento.replace('-','',1)
-                        if elemento1.isdigit() == True:
-                            #¿Tiene un . para separar el decimal? Entonces veamos si está bien (si es un número)
-                            if elemento1.count('.') == 1:
-                                #Reemplazamos el . por nada (se elimina el punto) 
-                                if elemento1.replace('.','',1).isdigit() == True:
-                                    SUMA += float(elemento)
-                                else:
-                                    verdadAvg = 0
-                            elif elemento1.count('.') == 0:
-                                if elemento1.isdigit() == True:
-                                    SUMA += float(elemento)
-                                else:
-                                    verdadAvg = 0
-                            else:
-                                verdadAvg = 0
-                        else:
-                            verdadAvg = 0
-                    elif elemento.count('-') == 0:
-                        if elemento.count('.') == 1:
-                            #Reemplazamos el . por nada (se elimina el punto) 
-                            if elemento.replace('.','',1).isdigit() == True:
-                                SUMA += float(elemento)
-                            else:
-                                verdadAvg = 0
-                        elif elemento.count('.') == 0:
-                            if elemento.isdigit() == True:
-                                SUMA += float(elemento)
-                            else:
-                                verdadAvg = 0
-                        else:
-                            verdadAvg = 0
-                    else:
-                        verdadAvg = 0
-                #Aquí será el promedio
-                nuevaTabla[atributosFuncionAgregados[i]].append(SUMA/float(len(listaDedicada)))
-                #Agregar esta función a las que están dando error si hubo un error.
+                #Hacemos el mismo check de que si los elementos son números o String, pero ahora incorporamos la suma
+                verdad = numero(listaDedicada)
+                #¿Todos son números? Ah, pues sume
+                if verdad == True:
+                    for elemento in listaDedicada:
+                        #Se suma
+                        SUMA += float(elemento)
+                    #Meta eso a la tabla
+                    nuevaTabla[atributosFuncionAgregados[i]].append(SUMA/float(len(listaDedicada)))
+                #Entonces son string, vamos a agregar esto a la parte de errores
+                else:
+                    verdadAvg = 0
+            #Agregar esta función a las que están dando error si hubo un error.
             if verdadAvg == 0:
                 mensaje = "La columna " + str(atributosFuncionAgregados[i]) + " presenta un error."
                 errores.append(mensaje)
