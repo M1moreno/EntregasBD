@@ -134,10 +134,16 @@ def atributosComun(tabla1,tabla2):
     for i in range(0,len(tuplaUnoComun)):
         #¿Están estos valores de la tupla (según el atributo en común) en la otra tabla?
         if tuplaUnoComun[i] in tuplaDosComun:
+            #Obtenemos la posición de la tuplaDosNoComun
+            posicion = 0
+            #El for para encontrarlo
+            for k in range(0,len(tuplaDosComun)):
+                if tuplaDosComun[k] == tuplaUnoComun[i]:
+                    posicion = k
             contador = 0
             #Entonces metalo en los atributos que estaban en la tabla 2 pero no en la 1
             for key in atributosNoComun:
-                tablaNueva[key].append(tuplaDosNoComun[i][contador])
+                tablaNueva[key].append(tuplaDosNoComun[posicion][contador])
                 contador += 1
         #¿No están? Entonces meta NULL en esos valores.
         else:
@@ -200,7 +206,14 @@ def uno():
         #El sort es para introducir luego los datos ordenados
         listaAtributosUno.sort()
         listaAtributosDos.sort()
-        nuevaTabla = iguales(relacionUno,relacionDos)
+        #No sé si usted pone los atributos con el mismo orden o no, entonces ordeno los dos diccionarios.
+        relacionUnoModificada = {}
+        relacionDosModificada = {}
+        #Los agrego a las relaciones modificadas
+        for key in listaAtributosUno:
+            relacionUnoModificada.update({key:relacionUno[key]})
+            relacionDosModificada.update({key:relacionDos[key]})        
+        nuevaTabla = iguales(relacionUnoModificada,relacionDosModificada)
     #Caso tres: Hay atributos en común, pero no todos son iguales en sí
     if any(x in listaAtributosUno for x in listaAtributosDos) == True:
         if len(listaAtributosUno) != len(listaAtributosDos):
