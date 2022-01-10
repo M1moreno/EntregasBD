@@ -14,7 +14,7 @@ def verificarSalidaInicio():
         switchInicial()
     elif seleccion == 0:
         quit()
-
+#Se imprime la explicación del punto 1
 def ejemploUno():
     print("Se le pedirá los atributos de la primera relación (separados por comas)")
     print("Ej:")
@@ -25,6 +25,7 @@ def ejemploUno():
     print("Luego se introducira los valores de cada tupla, pero se inserta una tupla a la vez (los valores de cada tupla se divide por comas)")
     print(">> 1,2,8 (NO SE INTRODUCE EL '>>', ESTO ES SOLO UN SIMBOLO REPRESENTADO LO QUE INTRODUCE EL USUARIO)" )
     print("Luego de ello se le hace lo mismo con la relación 2, al final entregará el resultado de R1 LEFT NATURAL OUTER JOIN R2")
+#Se imprime la explicación del punto 2
 def ejemploDos():
     print("Usted introduce los atributos con sus respectivas tuplas, como se hizo en el punto 1 ")
     print("Luego de crear la tabla el programa le solicitará la lista de atributos con la cual va a realizar agrupamiento, también deben estar separados por comas estos atributos")
@@ -42,6 +43,7 @@ def ejemploDos():
     print(">>cc")
     print(">>CONCATENATE")
     print("nombre")
+#El switch (Según la opción escogida se muestra cierto ejemplo o se vuelve al inicio)
 def switchEjemplos():
     print("1.Opcion 1")
     print("2.Opcion 2")

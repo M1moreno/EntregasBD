@@ -120,19 +120,15 @@ def dos():
             for key in listaAtributosAgrupar:
                 nuevaTabla[key].append(listaNoRepetidos[i][contador])
                 contador += 1
-        listaAtributosExceso = [] #Los atributos restantes pues
-        for i in range(0,len(listaAtributos)):
-            if listaAtributos[i] not in listaAtributosAgrupar:
-                listaAtributosExceso.append(listaAtributos[i])
-        listaDemasAtributos = [] #Conjuto de datos (restantes) segun el conjunto de datos (listaNoRepetidos)
+        listaDemasAtributos = [] #Conjuto de datos segun el conjunto de datos (listaNoRepetidos)
         #Vamos a agregar todos los demás datos a cada agrupación
         for i in range(0,len(listaNoRepetidos)):
             #Primero vacíos
             listaDemasAtributos.append([])
         for i in range(0,len(relacion[listaAtributos[0]])):
             tupla = []
-            #La de los otros atributos diferentes a los atributos de agrupamiento
-            for key in listaAtributosExceso:
+            #Los atributos de la relación
+            for key in relacion:
                 tupla.append(relacion[key][i])
             #Ahora los atributos de agrupamiento (no me refiero a los atributos en sí, sino al conjunto de valores según la tupla)
             tuplaAtributosAgrupados = []
@@ -147,8 +143,8 @@ def dos():
         for i in range(0,len(funcionAgregados)):
             #El atributo al que se refiere la función:
             atributoFuncion = atributosAgregados[i]
-            #Hora de sacarle el indice según la lista de atributos de exceso (esto para obtener solo los valores de dicho atributo en cada agrupación)
-            indiceAtributoFuncion = listaAtributosExceso.index(atributoFuncion)
+            #Hora de sacarle el indice según la lista de atributos 
+            indiceAtributoFuncion = listaAtributos.index(atributoFuncion)
             #En caso de que la funcion sea max
             if funcionAgregados[i] == "MAX":
                 #Por todos los grupos
