@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-01-24T19:25:39.018Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="o5Zr6JDMA-gYm73d3MZk" version="16.4.5" type="github">
+<mxfile host="app.diagrams.net" modified="2022-01-24T19:28:15.869Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="HOY_IL84u3DgmJ0RJJDU" version="16.4.5" type="github">
   <diagram id="t7iMz_v3nmqHoSBbqk-X" name="ModeloER">
     <mxGraphModel dx="1609" dy="517" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -34,7 +34,7 @@
         <mxCell id="szS_IiKJX-dhthdG4j-6-21" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="szS_IiKJX-dhthdG4j-6-22" vertex="1">
           <mxGeometry width="130" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="szS_IiKJX-dhthdG4j-6-20" value="&lt;b&gt;REPRODUCTOR&lt;/b&gt;&lt;br&gt;*lista reproducción&lt;br&gt;*plataforma" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="szS_IiKJX-dhthdG4j-6-22" vertex="1">
+        <mxCell id="szS_IiKJX-dhthdG4j-6-20" value="&lt;b&gt;REPRODUCTOR&lt;/b&gt;&lt;br&gt;#lista reproducción&lt;br&gt;*plataforma" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="szS_IiKJX-dhthdG4j-6-22" vertex="1">
           <mxGeometry x="10" y="5" width="110" height="70" as="geometry" />
         </mxCell>
         <mxCell id="szS_IiKJX-dhthdG4j-6-25" value="" style="group" parent="1" vertex="1" connectable="0">
