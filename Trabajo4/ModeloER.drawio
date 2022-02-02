@@ -1,10 +1,10 @@
-<mxfile host="app.diagrams.net" modified="2022-02-01T22:03:03.169Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="rpX1rD0hLTkv6I6pnWvb" version="16.4.5" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-02T21:40:17.369Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="4G2J-57ymWKTFIZKoiB4" version="16.5.2" type="github">
   <diagram id="t7iMz_v3nmqHoSBbqk-X" name="ModeloER">
-    <mxGraphModel dx="2048" dy="648" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2310" dy="787" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="OXFTJpmhbNPDLJmi7TiD-1" value="" style="triangle;whiteSpace=wrap;html=1;rotation=-90;connectable=0;fillColor=none;" vertex="1" parent="1">
+        <mxCell id="OXFTJpmhbNPDLJmi7TiD-1" value="" style="triangle;whiteSpace=wrap;html=1;rotation=-90;connectable=0;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="104.38" y="800" width="31.25" height="50" as="geometry" />
         </mxCell>
         <mxCell id="szS_IiKJX-dhthdG4j-6-1" value="&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;b&gt;MESA&lt;/b&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px ; border: none ; padding: 0px&quot;&gt;#nombre ID&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px ; border: none ; padding: 0px&quot;&gt;*tamaño&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px ; border: none ; padding: 0px&quot;&gt;*ubicación&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
@@ -32,13 +32,13 @@
           <mxGeometry x="110" y="360" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="szS_IiKJX-dhthdG4j-6-22" value="" style="group" parent="1" vertex="1" connectable="0">
-          <mxGeometry x="25" y="410" width="130" height="80" as="geometry" />
+          <mxGeometry x="-10" y="410" width="170" height="80" as="geometry" />
         </mxCell>
         <mxCell id="szS_IiKJX-dhthdG4j-6-21" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="szS_IiKJX-dhthdG4j-6-22" vertex="1">
-          <mxGeometry width="130" height="80" as="geometry" />
+          <mxGeometry width="170" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="szS_IiKJX-dhthdG4j-6-20" value="&lt;b&gt;REPRODUCTOR&lt;/b&gt;&lt;br&gt;#lista reproducción&lt;br&gt;*plataforma&lt;br&gt;*cantidad_canciones" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="szS_IiKJX-dhthdG4j-6-22" vertex="1">
-          <mxGeometry x="10" y="5" width="110" height="70" as="geometry" />
+        <mxCell id="szS_IiKJX-dhthdG4j-6-20" value="&lt;b&gt;LISTA_REPRODUCCIÓN&lt;/b&gt;&lt;br&gt;#nombre&lt;br&gt;*plataforma&lt;br&gt;*cantidad_canciones" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="szS_IiKJX-dhthdG4j-6-22" vertex="1">
+          <mxGeometry x="10.666666666666668" y="5" width="149.33333333333334" height="70" as="geometry" />
         </mxCell>
         <mxCell id="szS_IiKJX-dhthdG4j-6-25" value="" style="group" parent="1" vertex="1" connectable="0">
           <mxGeometry x="440" y="420" width="140" height="80" as="geometry" />
@@ -103,13 +103,13 @@
             <mxPoint x="560" y="230" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="szS_IiKJX-dhthdG4j-6-88" value="en la lista de reproducción de" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="szS_IiKJX-dhthdG4j-6-88" value="incluida en" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry y="780" width="70" height="50" as="geometry" />
         </mxCell>
         <mxCell id="szS_IiKJX-dhthdG4j-6-90" value="pedida como" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="220" y="800" width="60" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="szS_IiKJX-dhthdG4j-6-91" value="reproduciendo desde su lista" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+        <mxCell id="szS_IiKJX-dhthdG4j-6-91" value="compuesta de" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="40" y="500" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="szS_IiKJX-dhthdG4j-6-93" value="quien pidió" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
@@ -215,7 +215,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="gC7zmRtma9nNrmju2rJM-2" value="NOTAS:&lt;br&gt;-Nos aseguraremos de que los nombres no se repitan, si varios artistas tienen una canción del mismo nombre se aclara con siglas o números.&lt;br&gt;-No se van a repetir los nombres de los productos." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-500" y="730" width="140" height="150" as="geometry" />
+          <mxGeometry x="-100" y="850" width="140" height="150" as="geometry" />
         </mxCell>
         <mxCell id="stF59OzjU4HoUzXqxAx8-1" value="&lt;b&gt;MESAXCLIENTE&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;*fecha&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="190" y="127.5" width="160" height="55" as="geometry" />
