@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-02T23:49:07.135Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="LO4mJEXDCEbBumwyqdZX" version="16.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-03T00:19:32.235Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="8WaEmXGQ1RxYhTkLptm4" version="16.5.3" type="github">
   <diagram id="t7iMz_v3nmqHoSBbqk-X" name="ModeloER">
     <mxGraphModel dx="2714" dy="1002" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -7,7 +7,7 @@
         <mxCell id="OXFTJpmhbNPDLJmi7TiD-1" value="" style="triangle;whiteSpace=wrap;html=1;rotation=-90;connectable=0;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="104.38" y="800" width="31.25" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="szS_IiKJX-dhthdG4j-6-1" value="&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;b&gt;MESA&lt;/b&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px ; border: none ; padding: 0px&quot;&gt;#nombre ID&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px ; border: none ; padding: 0px&quot;&gt;*tamaño&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px ; border: none ; padding: 0px&quot;&gt;*ubicación&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+        <mxCell id="szS_IiKJX-dhthdG4j-6-1" value="&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;b&gt;MESA&lt;/b&gt;&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px ; border: none ; padding: 0px&quot;&gt;#ID&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px ; border: none ; padding: 0px&quot;&gt;*nombre&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px ; border: none ; padding: 0px&quot;&gt;*tamaño&lt;/blockquote&gt;&lt;blockquote style=&quot;margin: 0px 0px 0px 40px ; border: none ; padding: 0px&quot;&gt;*ubicación&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
           <mxGeometry x="-130" y="100" width="190" height="100" as="geometry" />
         </mxCell>
         <mxCell id="szS_IiKJX-dhthdG4j-6-2" value="&lt;blockquote style=&quot;margin: 0 0 0 40px ; border: none ; padding: 0px&quot;&gt;&lt;b&gt;CLIENTE&lt;br&gt;&lt;/b&gt;#cédula&lt;br&gt;*nombre&lt;br&gt;*cantidad personas&lt;/blockquote&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
@@ -104,7 +104,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="szS_IiKJX-dhthdG4j-6-88" value="incluida en" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry y="780" width="70" height="50" as="geometry" />
+          <mxGeometry x="10" y="790" width="70" height="50" as="geometry" />
         </mxCell>
         <mxCell id="szS_IiKJX-dhthdG4j-6-90" value="pedida como" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="220" y="800" width="60" height="30" as="geometry" />
@@ -185,7 +185,7 @@
           <mxGeometry x="-190" y="175" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="szS_IiKJX-dhthdG4j-6-151" value="unida a" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-180" y="60" width="60" height="30" as="geometry" />
+          <mxGeometry x="-190" y="90" width="60" height="30" as="geometry" />
         </mxCell>
         <mxCell id="E4MxPmM2y-Qh73wYfzmi-6" value="hecha por" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=0;" parent="1" vertex="1">
           <mxGeometry x="590" y="450" width="60" height="30" as="geometry" />
