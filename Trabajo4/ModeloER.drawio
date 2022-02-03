@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-02-03T01:09:04.077Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/97.0.4692.99 Safari/537.36" etag="K0fGkyeP4LaAvb4kOWRH" version="16.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-03T21:45:31.297Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.87 Safari/537.36" etag="JjECxRCRcmnrkTKhrypN" version="16.5.2" type="github">
   <diagram id="t7iMz_v3nmqHoSBbqk-X" name="ModeloER">
-    <mxGraphModel dx="2714" dy="1002" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1609" dy="517" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -213,9 +213,6 @@
             <mxPoint x="730" y="410" as="sourcePoint" />
             <mxPoint x="590" y="480" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="gC7zmRtma9nNrmju2rJM-2" value="NOTAS:&lt;br&gt;-Nos aseguraremos de que los nombres no se repitan, si varios artistas tienen una canción del mismo nombre se aclara con siglas o números.&lt;br&gt;-No se van a repetir los nombres de los productos." style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="-100" y="850" width="140" height="150" as="geometry" />
         </mxCell>
         <mxCell id="stF59OzjU4HoUzXqxAx8-1" value="&lt;b&gt;MESAXCLIENTE&lt;/b&gt;&lt;br&gt;&lt;div style=&quot;text-align: left&quot;&gt;&lt;span&gt;*fecha&lt;/span&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
           <mxGeometry x="190" y="127.5" width="160" height="55" as="geometry" />
