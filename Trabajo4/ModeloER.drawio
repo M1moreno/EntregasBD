@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2022-02-04T19:51:27.320Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.87 Safari/537.36" etag="sY_VlY9CjMqzQPLsYAqX" version="16.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-04T19:55:17.078Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.87 Safari/537.36" etag="YRz5aWNbkTH_ssvZhYdk" version="16.5.3" type="github">
   <diagram id="t7iMz_v3nmqHoSBbqk-X" name="ModeloER">
     <mxGraphModel dx="2160" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -389,7 +389,7 @@
             <mxPoint x="198.96000000000004" y="840" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="stF59OzjU4HoUzXqxAx8-56" value="&lt;b&gt;CANCION_PERSONAL&lt;/b&gt;&lt;br&gt;*fecha" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;align=left;" parent="1" vertex="1">
+        <mxCell id="stF59OzjU4HoUzXqxAx8-56" value="&lt;b&gt;CANCION_PERSONAL&lt;/b&gt;&lt;br&gt;#código&lt;br&gt;*fecha" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;align=left;" parent="1" vertex="1">
           <mxGeometry x="180" y="620" width="150" height="60" as="geometry" />
         </mxCell>
         <mxCell id="stF59OzjU4HoUzXqxAx8-57" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="stF59OzjU4HoUzXqxAx8-66" edge="1">
