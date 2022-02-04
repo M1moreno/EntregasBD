@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-02-04T19:55:17.078Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.87 Safari/537.36" etag="YRz5aWNbkTH_ssvZhYdk" version="16.5.3" type="github">
+<mxfile host="app.diagrams.net" modified="2022-02-04T21:42:59.142Z" agent="5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.87 Safari/537.36" etag="QyRUxSxQfhad_lg9-Q_J" version="16.5.3" type="github">
   <diagram id="t7iMz_v3nmqHoSBbqk-X" name="ModeloER">
-    <mxGraphModel dx="2160" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1542" dy="492" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -445,6 +445,12 @@
         </mxCell>
         <mxCell id="-XEEmlF3LrYFmZvbx9w7-1" value="compuesta de" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="220" y="690" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xHegn0Ev1S5n4FimGdoR-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;dashed=1;dashPattern=1 1;" vertex="1" parent="1">
+          <mxGeometry x="715" y="820" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="xHegn0Ev1S5n4FimGdoR-2" value="&lt;span style=&quot;font-size: 14px&quot;&gt;- El nombre de la mesa es un identificador alternativo.&lt;br&gt;- El carnet del empleado es un identificador alternativo.&lt;br&gt;&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;dashed=1;dashPattern=1 1;" vertex="1" parent="1">
+          <mxGeometry x="717.5" y="790" width="215" height="140" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
