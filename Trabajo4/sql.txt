@@ -1,0 +1,89 @@
+CREATE TABLE mesa(
+id NUMBER(3) PRIMARY KEY CHECK(id > -1),
+nombre VARCHAR(40) NOT NULL UNIQUE,
+tamaño NUMBER(2) NOT NULL CHECK(tamaño > 0),
+ubicacion VARCHAR(40) NOT NULL,
+msa NUMBER(3) REFERENCES mesa
+);
+
+CREATE TABLE cliente(
+cedula NUMBER(10) PRIMARY KEY CHECK(cedula > -1),
+nombre VARCHAR(40) NOT NULL,
+cantidad_personas NUMBER(4) NOT NULL
+);
+
+CREATE TABLE mesaxcliente(
+cl NUMBER(10) NOT NULL REFERENCES cliente,
+ms NUMBER(3) NOT NULL REFERENCES mesa,
+fecha DATE NOT NULL,
+PRIMARY KEY(cl,ms)
+);
+
+CREATE TABLE empleado(
+cedula NUMBER(10) PRIMARY KEY CHECK(cedula > -1),
+carnet NUMBER(3) NOT NULL UNIQUE CHECK(carnet > -1),
+nombre VARCHAR(40) NOT NULL,
+salario NUMBER(4) NOT NULL CHECK(salario > 0),
+tipo VARCHAR(1) NOT NULL CHECK(tipo = 'm' OR tipo = 'b')
+);
+
+CREATE TABLE mesero(
+ceme NUMBER(10) PRIMARY KEY REFERENCES empleado
+);
+
+CREATE TABLE bartender(
+ceba NUMBER(10) PRIMARY KEY REFERENCES empleado
+);
+
+
+CREATE TABLE lista_reproduccion(
+codigoID NUMBER(10) PRIMARY KEY CHECK(codigoID > -1),
+nombre VARCHAR(40) NOT NULL,
+plataforma VARCHAR(40) NOT NULL,
+cantidad_canciones NUMBER(3) NOT NULL
+);
+
+CREATE TABLE cancion(
+codigoID NUMBER(10) PRIMARY KEY CHECK(codigoID > -1),
+nombre VARCHAR(40) NOT NULL,
+artista VARCHAR(40) NOT NULL,
+album VARCHAR(40) NOT NULL,
+genero VARCHAR(40) NOT NULL,
+fecha_creacion DATE NOT NULL,
+duracion NUMBER(4) NOT NULL CHECK(duracion > 0),
+id_lista_reproduccion NUMBER(10) REFERENCES lista_reproduccion,
+cancionPersonal NUMBER(10) REFERENCES cancion_personal,
+CHECK((cancionPersonal IS NULL AND id_lista_reproduccion IS NOT NULL) OR (cancionPersonal IS NOT NULL AND id_lista_reproduccion IS NULL))
+);
+
+
+CREATE TABLE cancion_personal(
+codigo NUMBER(10) PRIMARY KEY,
+fecha DATE NOT NULL,
+ccliente NUMBER(10) NOT NULL REFERENCES cliente
+);
+
+CREATE TABLE producto(
+codigo NUMBER(3) PRIMARY KEY CHECK(codigo > -1),
+nombre VARCHAR(40) NOT NULL,
+tipo VARCHAR(40) NOT NULL,
+precio_unitario NUMBER(8) NOT NULL CHECK(precio_unitario > 0)
+);
+
+CREATE TABLE orden(
+codigo NUMBER(10) PRIMARY KEY CHECK(codigo > -1),
+fecha DATE NOT NULL,
+precio NUMBER(8) NOT NULL CHECK(precio > 0),
+cc_cliente NUMBER(10) NOT NULL REFERENCES cliente,
+cc_mesero_inicial NUMBER(10) NOT NULL REFERENCES mesero,
+cc_mesero_final NUMBER(10) NOT NULL REFERENCES mesero,
+cc_bartender NUMBER(10) NOT NULL REFERENCES bartender
+);
+
+CREATE TABLE compra(
+cantidad NUMBER(3) NOT NULL CHECK(cantidad > 0),
+codigo_orden NUMBER(10) NOT NULL REFERENCEs orden,
+codigo_producto NUMBER(3) NOT NULL REFERENCES producto,
+PRIMARY KEY(codigo_orden,codigo_producto)
+);
+
