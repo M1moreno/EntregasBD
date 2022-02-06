@@ -82,7 +82,7 @@ cc_bartender NUMBER(10) NOT NULL REFERENCES bartender
 
 CREATE TABLE compra(
 cantidad NUMBER(3) NOT NULL CHECK(cantidad > 0),
-codigo_orden NUMBER(10) NOT NULL REFERENCEs orden,
+codigo_orden NUMBER(10) NOT NULL REFERENCES orden,
 codigo_producto NUMBER(3) NOT NULL REFERENCES producto,
 PRIMARY KEY(codigo_orden,codigo_producto)
 );
